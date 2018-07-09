@@ -47,6 +47,7 @@
     <Compile Include="WorkerBasic.cs" />
     <Compile Include="WorkerFixSalary.cs" />
     <Compile Include="WorkerHourlySalary.cs" />
+    <Compile Include="WorkersArray.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
