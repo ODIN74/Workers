@@ -17,5 +17,10 @@ namespace Workers
         {
             return rate;
         }
+
+        public override string ToString()
+        {
+            return $"{this.surName}, {this.firstName}, {this.age}, {this.department}, {this.position}, {this.rate}, Фиксированный оклад";
+        }
     }
 }

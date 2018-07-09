@@ -20,6 +20,7 @@ namespace Workers
             foreach (WorkerBasic worker in wa)
             {
                 Console.WriteLine(worker.ToString());
+                Console.WriteLine($"Среднемесячная зарплата: {worker.AverageSalary()}\n");
             }
             Console.ReadLine();
         }

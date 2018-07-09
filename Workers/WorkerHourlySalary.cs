@@ -18,5 +18,10 @@ namespace Workers
         {
             return averageNumbersOfDays * workHours * rate;
         }
+
+        public override string ToString()
+        {
+            return $"{this.surName}, {this.firstName}, {this.age}, {this.department}, {this.position}, {this.rate}, Почасовая оплата";
+        }
     }
 }

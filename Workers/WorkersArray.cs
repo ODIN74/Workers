@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace Workers
 {
-    class WorkersArray
+    using System.Collections;
+
+    internal class WorkersArray : IEnumerable
     {
         private WorkerBasic[] workersArray;
 
         public WorkersArray(WorkerBasic[] workersArray)
         {
-            this.workersArray = workersArray;
+            this.workersArray = new WorkerBasic[workersArray.Length];
+            Array.Copy(workersArray, this.workersArray, workersArray.Length);
         }
 
-        public WorkerBasic this[int i]
+        public IEnumerator GetEnumerator()
         {
-            get => workersArray[i];
-            set
-            {
-                workersArray[i] = value;
-            }
+            return this.workersArray.GetEnumerator();
         }
     }
 }

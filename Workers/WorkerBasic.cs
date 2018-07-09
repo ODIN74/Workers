@@ -27,6 +27,7 @@ namespace Workers
             this.department = department;
             this.position = position;
             this.experience = experience;
+            this.rate = rate;
         }
 
         public abstract decimal AverageSalary();
@@ -35,11 +36,6 @@ namespace Workers
         {
             WorkerBasic worker = (WorkerBasic)obj; 
             return String.Compare(this.surName, worker.surName);
-        }
-
-        public override string ToString()
-        {
-            return $"{this.surName}, {this.firstName}, {this.age}, {this.department}, {this.position}, {this.rate}";
         }
 
     }
